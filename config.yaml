@@ -1,0 +1,45 @@
+project:
+  name: fake_review_detection_dissertation
+  random_seed: 42
+
+data:
+  raw_path: data/raw/ott_deceptive_reviews.csv
+  processed_dir: data/processed
+  splits_dir: data/splits
+  text_column: text
+  label_column: label
+  test_size: 0.15
+  val_size: 0.15
+  max_length: 256
+
+labels:
+  truthful: 0
+  deceptive: 1
+
+stylometric:
+  scaler_path: models/stylometric/scaler.joblib
+  model_path: models/stylometric/logreg.joblib
+  features_path: data/processed/stylometric_features.csv
+
+bert:
+  pretrained_model_name: bert-base-uncased
+  batch_size: 16
+  learning_rate: 2.0e-5
+  epochs: 3
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  model_dir: models/bert
+
+hybrid:
+  batch_size: 16
+  learning_rate: 2.0e-5
+  epochs: 3
+  dropout: 0.2
+  hidden_dim: 256
+  model_dir: models/hybrid
+
+results:
+  metrics_dir: results/metrics
+  plots_dir: results/plots
+  shap_dir: results/shap
+  reports_dir: results/reports
