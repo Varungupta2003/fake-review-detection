@@ -1,0 +1,23 @@
+# environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.egg-info/
+.pytest_cache/
+
+# data: the Ott et al. corpus is not redistributed here (see data/README.md)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/
+data/splits/
+
+# large model artefacts (re-create with the scripts in scripts/)
+/models/
+*.pt
+*.safetensors
+*.joblib
+
+# keep the small result files that the README and docs/RESULTS.md cite
+results/shap/
