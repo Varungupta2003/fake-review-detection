@@ -1,0 +1,20 @@
+{
+  "stylometric_vs_bert": {
+    "n01": 32,
+    "n10": 8,
+    "statistic": 13.225,
+    "p_value": 0.0002762397239473395
+  },
+  "stylometric_vs_hybrid": {
+    "n01": 45,
+    "n10": 13,
+    "statistic": 16.56896551724138,
+    "p_value": 4.69124582109418e-05
+  },
+  "bert_vs_hybrid": {
+    "n01": 16,
+    "n10": 8,
+    "statistic": 2.0416666666666665,
+    "p_value": 0.15304188415881603
+  }
+}
